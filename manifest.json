@@ -3,6 +3,9 @@
     "name": "Accessible Web Extension",
     "version": "1.0",
     "permissions": ["activeTab"],
+    "background": {
+        "service_worker": "background.js"
+    },
     "action": {
         "default_popup": "popup.html",
         "default_title": "Toggle Accessibility Features"
@@ -12,5 +15,13 @@
             "matches": ["<all_urls>"],
             "js": ["content.js"]
         }
-    ]   
+    ],
+    "commands": {
+        "toggle-readability": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Q"
+            },
+            "description": "Toggle Readability Mode"
+        }
+    }
 }
