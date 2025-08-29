@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Accessibility Controls</title>
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <p>Status: <span id="status">OFF</span></p>
-    <button id="toggleButton">Turn ON</button>
+    <div class="header">
+        <h1 class="title">Accessibility Tool</h1>
+    </div>
+    
+    <div class="status-row">
+        <span class="status-label">Status:</span>
+        <span id="status" class="status-value status-off" aria-live="polite">OFF</span>
+    </div>
+    
+    <button id="toggleBtn" class="toggle-button" aria-describedby="status">
+        Turn ON
+    </button>
+    
     <script src="popup.js"></script>
 </body>
 </html>
